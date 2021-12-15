@@ -15,7 +15,7 @@ import cargoAPI
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
 dataBase = dataBase.DB()
-app.config['GOOGLEMAPS_KEY'] = "AIzaSyA02vq5et0wTVE_Sr9IZUNUtQc2rJxJYlM"
+app.config['GOOGLEMAPS_KEY'] = " "
 
 GoogleMaps(app)
 
@@ -173,7 +173,7 @@ def mapview():
 @app.route("/map", methods=["GET", "POST"])
 def map():
     now = datetime.now()
-    gmaps = googlemaps.Client(key='AIzaSyA02vq5et0wTVE_Sr9IZUNUtQc2rJxJYlM')
+    gmaps = googlemaps.Client(key=' ')
     geocode_result = gmaps.geocode('istanbul taksim')
     directions_result = gmaps.directions("istanbul,taksim",
                                          "Bursa ,merkez",
@@ -343,7 +343,7 @@ def map_next():
     if request.method == "POST":
         pass
     now = datetime.now()
-    gmaps = googlemaps.Client(key='AIzaSyA02vq5et0wTVE_Sr9IZUNUtQc2rJxJYlM')
+    gmaps = googlemaps.Client(key=' ')
     geocode_result = gmaps.geocode('istanbul taksim')
     directions_result = gmaps.directions("istanbul,taksim",
                                          "Bursa ,merkez",
