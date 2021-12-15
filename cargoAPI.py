@@ -2,7 +2,7 @@
 import googlemaps
 from datetime import datetime
 
-gmaps = googlemaps.Client(key='AIzaSyA02vq5et0wTVE_Sr9IZUNUtQc2rJxJYlM')
+gmaps = googlemaps.Client(key='')
 
 # Geocoding an address
 geocode_result = gmaps.geocode('istanbul taksim')
